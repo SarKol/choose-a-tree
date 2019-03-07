@@ -1,19 +1,33 @@
 <!doctype html>
 <html lang=en>
   <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8">
     <title>Choose a tree</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <h1>Help me choose a tree...</h1>
-    <img class="image" src=https://cdn.pixabay.com/photo/2016/11/18/23/58/tree-1837408_1280.png width="300" height="300">
+    <img class="image" src="https://cdn.pixabay.com/photo/2016/11/18/23/58/tree-1837408_1280.png" width="300" height="300">
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Anything"></input>
       </div>
       <button class="addOption">Add</button>
     </div>
+    <div class="resultSection"></div>
     <button>Go!</button>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+      $('.resultSection').hide()
+
+      var add_option = function() {
+        $ ('.inputs').append('<input></input>')
+      }
+
+      $('.addOption').click(add_option)
+      })
+    </script>
   </body>
 </html>
